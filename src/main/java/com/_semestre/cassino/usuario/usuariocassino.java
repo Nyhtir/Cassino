@@ -1,6 +1,10 @@
-package com._semestre.cassino;
+package com._semestre.cassino.usuario;
+
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -20,6 +24,14 @@ public class usuariocassino {
         this.idade = idade;
         this.saldo = saldo;
     }
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<historiocodejogada> historico = new ArrayList<>();
+
+    public void adicionarJogo(String nomeJogo, int entrada, float premio) {
+        historiocodejogada historicoJogo = new historiocodejogada(nomeJogo, entrada, premio);
+        historico.add(historicoJogo);
+    }
+
 
     public String getnome() {
         return nome;
