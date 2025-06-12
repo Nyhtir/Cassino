@@ -1,7 +1,7 @@
 package com._semestre.cassino.jogos;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+
 
 @Entity
 public class poquer extends jogo {

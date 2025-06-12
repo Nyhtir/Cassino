@@ -1,8 +1,8 @@
 package com._semestre.cassino.jogos;
 
 import jakarta.persistence.*;
-
 @MappedSuperclass
+@Entity
 abstract class jogo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,7 +1,7 @@
 package com._semestre.cassino.jogos;
 
 import jakarta.persistence.Entity;
-
+import lombok.NoArgsConstructor;
 
 @Entity
 public class blackjack extends jogo{
